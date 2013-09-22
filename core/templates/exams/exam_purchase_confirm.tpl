@@ -16,5 +16,4 @@
 		If you do not pass the test you will have to re-purchase the exam again.<br />
 		Continue - <a href="<?php echo SITE_URL ?>/index.php/Exams"><b>NO</b></a> | <a href="<?php echo SITE_URL ?>/index.php/Exams/purchase_exam?id=<?php echo $examid ?>"><b>YES</b></a>
     </div>
-    exam_purchase_confirm.tpl
 </center>

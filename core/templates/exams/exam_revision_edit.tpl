@@ -14,7 +14,7 @@
     <?php if (isset($message)) {echo $message;}
     ?>
     <form action="<?php echo url('/Exams_admin');?>" method="post" enctype="multipart/form-data">
-        <table width="80%" border="1px">
+        <table>
             <tr bgcolor="#cccccc">
                 <td colspan="2">Date Created</td>
                 <td>Created By</td>
@@ -68,5 +68,4 @@
         <input type="hidden" name="action" value="save_revision_edit" />
         <input type="submit" value="Edit Revision">
     </form>
-    exam_revision_edit.tpl
 </center>

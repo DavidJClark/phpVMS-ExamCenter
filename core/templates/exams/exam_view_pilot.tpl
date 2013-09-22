@@ -14,7 +14,7 @@ if (isset($message)) {echo $message;}
 ?>
 <center>
     <h2>View Pilot</h2>
-    <table width="80%" border="1px">
+    <table>
 
         <tr>
             <td colspan="3">Exam History</td>
@@ -69,7 +69,6 @@ if (isset($message)) {echo $message;}
         <input type="submit" value="Return To Pilot Manager"></form>
     <form method="link" action="<?php echo SITE_URL ?>/index.php/Exams_admin">
         <input type="submit" value="Return To Exam Admin Panel"></form>
-    exam_view_pilot.tpl
 </center>		
 <br />
 

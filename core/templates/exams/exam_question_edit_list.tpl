@@ -20,7 +20,7 @@
     else {
         ?>
 
-    <table width="80%" border="1px">
+    <table>
         <tr>
             <td>Edit</td>
             <td>Question</td>
@@ -59,5 +59,4 @@
     <?php
     }
     ?>
-    exam_question_edit_list.tpl
 </center>

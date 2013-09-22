@@ -11,12 +11,12 @@
 ?>
 <center>
     <br />
-    <table border="1px" width="80%">
+    <table>
         <?php
         if (isset($message)) {echo '<tr><td colspan="6">'.$message.'</td></tr>';}
         ?>
         <tr>
-            <td colspan="2"><img src="<?php echo SITE_URL ?>/examimages/exam_logo.gif" alt="EXAMCenter &copy simpilotgroup" /></td>
+            <td colspan="2"><img src="<?php echo TEMPLATES_PATH; ?>/exams/images/exam_logo.gif" alt="EXAMCenter &copy simpilotgroup" /></td>
             <td colspan="4"><br /><h4>EXAMCenter Admin Panel</h4></td>
 
         <tr>
@@ -111,7 +111,7 @@ if (!$assigned) {echo '<tr><td colspan="6">No Exams Are Currently Assigned</td><
         ?>
     </table>
     <hr /><br />
-    <table border="1px" width="80%">
+    <table>
         <tr>
             <td bgcolor="#cccccc"><b>Exam Center Exam And Question Configuration:</b></td>
             <td bgcolor="#cccccc"><b>View/Edit</b></td>
@@ -153,7 +153,7 @@ else {echo 'No Exams Taken';}?>
 $admin = ExamsData::check_admin(Auth::$userinfo->pilotid);
                 if ($admin->admin_level == '1') {
                     ?>
-    <table border="1px" width="80%">
+    <table>
         <tr>
             <td bgcolor="#cccccc"><b>Exam Center Configuration:</b></td>
             <td bgcolor="#cccccc"><b>View/Edit</b></td>
@@ -236,7 +236,7 @@ $admin = ExamsData::check_admin(Auth::$userinfo->pilotid);
                 <?php
 }
 ?>
-    <table width="75%">
+    <table>
         <tr>
             <td>
                 <form method="link" action="<?php echo SITE_URL ?>/index.php/Exams_admin/new_test_form">
@@ -252,5 +252,4 @@ $admin = ExamsData::check_admin(Auth::$userinfo->pilotid);
             </td>
         </tr>
     </table>
-    exam_admin.tpl
 </center>

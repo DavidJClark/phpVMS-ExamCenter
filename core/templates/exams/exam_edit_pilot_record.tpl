@@ -12,7 +12,7 @@
 <center>
     <h2>Edit Pilot Test Record</h2>
     <form action="<?php echo url('/Exams_admin');?>" method="post" enctype="multipart/form-data">
-        <table width="80%" border="1px">
+        <table>
             <tr>
                 <td>Exam:</td>
                 <td colspan="2"><b><?php echo $record->exam_title; ?></b></td>
@@ -68,7 +68,7 @@
             </tr>
             <tr>
                 <td colspan="1"><a href="<?php echo SITE_URL ?>/index.php/Exams_admin/delete_pilot_record?id=<?php echo $record->id; ?>&pilot_id=<?php echo $record->pilot_id; ?>"><b>DELETE</b></a></td>
-                <td colspan="2"><font color="#FF0000"><b>Delete This Record - This will permenantly DELETE this record from the datbase!</b></font></td>
+                <td colspan="2"><font color="#FF0000"><b>Delete This Record - This will permanently DELETE this record from the database!</b></font></td>
             </tr>
         </table>
         <br />
@@ -79,5 +79,4 @@
     </form>
     <form method="link" action="<?php echo SITE_URL ?>/index.php/Exams_admin/view_individual_pilot">
         <input type="submit" value="Return To Pilot Manager"></form>
-    exam_edit_pilot_record.tpl
 </center>

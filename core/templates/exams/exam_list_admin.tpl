@@ -10,9 +10,9 @@
 //@license http://creativecommons.org/licenses/by-nc-sa/3.0/
 ?>
 <center>
-    <table border="1px" width="90%">
+    <table>
         <tr>
-            <td colspan="8"><img src="<?php echo SITE_URL ?>/examimages/exam_logo.gif" alt="EXAMCenter &copy; simpilotgroup" /></td>
+            <td colspan="8"><img src="<?php echo TEMPLATES_PATH; ?>/exams/images/exam_logo.gif" alt="EXAMCenter &copy; simpilotgroup" /></td>
         </tr>
         <tr>
             <td colspan="8" bgcolor="#cccccc"><b>Existing Exams</b></td>
@@ -50,5 +50,4 @@
 
     <form method="link" action="<?php echo SITE_URL ?>/index.php/Exams_admin">
         <input type="submit" value="Return To Exam Admin Panel"></form>
-    exam_list_admin.tpl
 </center>

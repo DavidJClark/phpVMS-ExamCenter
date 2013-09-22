@@ -18,7 +18,7 @@
     else {
         ?>
     <form action="<?php echo url('/Exams_admin');?>" method="post" enctype="multipart/form-data">
-        <table width="80%" border="1px">
+        <table>
             <tr>
                 <td>Field</td>
                 <td>Current Value</td>
@@ -106,5 +106,4 @@
     <?php
     }
     ?>
-    exam_question_edit_form.tpl
 </center>

@@ -13,9 +13,9 @@
     <?php if (isset($message)) {echo $message;}
     ?>
 
-    <table width="80%" border="1px">
+    <table>
         <tr>
-            <td colspan="5"><img src="<?php echo SITE_URL ?>/examimages/exam_logo.gif" alt="EXAMCenter &copy; simpilotgroup" /></td>
+            <td colspan="5"><img src="<?php echo TEMPLATES_PATH; ?>/exams/images/exam_logo.gif" alt="EXAMCenter &copy; simpilotgroup" /></td>
         </tr>
         <tr>
             <td colspan="5" bgcolor="#cccccc"><b>Revision Reasons</b></td>
@@ -62,5 +62,4 @@
     </table>
     <form method="link" action="<?php echo SITE_URL ?>/index.php/Exams_admin">
         <input type="submit" value="Return To Exam Admin Panel"></form>
-exam_revision_list.tpl
 </center>

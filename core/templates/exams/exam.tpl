@@ -15,7 +15,7 @@
 		Use the submit button at the bottom of the exam to submit your answers.<br /><br/>
 
     <form name="myform" action="<?php echo SITE_URL ?>/index.php/Exams/grade_exam" method="POST">
-        <table width="80%" border="1px" cellpadding="15px">
+        <table cellpadding="15px">
             <?php
             echo '<tr><td colspan="2"><h2>'.$title->exam_description.'</h2></td></tr>';
             $count = 0;

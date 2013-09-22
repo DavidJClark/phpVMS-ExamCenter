@@ -11,9 +11,9 @@
 ?>
 <center>
     <?php if (isset($message)) {echo $message;}?>
-    <h2>Edit Adminstrator Status</h2>
+    <h2>Edit Administrator Status</h2>
     <form action="<?php echo url('/Exams_admin');?>" method="post" enctype="multipart/form-data">
-        <table width="80%" border="1px">
+        <table>
             <tr>
                 <td>Pilot</td>
                 <td>Current Admin Status</td>
@@ -75,5 +75,4 @@
     </form>
     <form method="link" action="<?php echo SITE_URL ?>/index.php/Exams_admin/edit_admin_list">
         <input type="submit" value="Return To Admin Status Panel"></form>
-    exam_edit_admin.tpl
 </center>

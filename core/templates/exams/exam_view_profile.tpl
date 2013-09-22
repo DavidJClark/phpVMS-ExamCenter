@@ -13,9 +13,9 @@ if (isset($message)) {echo '<br />'; echo $message;}
 ?>
 <center><?php //print_r($data); ?>
     <h2>Exam History For: <?php echo Auth::$userinfo->firstname.' '.Auth::$userinfo->lastname.''; ?></h2>
-    <table width="80%" border="1px">
+    <table>
         <tr>
-            <td colspan="5"><img src="<?php echo SITE_URL ?>/examimages/exam_logo.gif" alt="EXAMCenter &copy; simpilotgroup" /></td>
+            <td colspan="5"><img src="<?php echo TEMPLATES_PATH; ?>/exams/images/exam_logo.gif" alt="EXAMCenter &copy; simpilotgroup" /></td>
         </tr>
         <tr bgcolor="#cccccc">
             <td colspan="3">Exam History</td>
@@ -72,5 +72,4 @@ if (isset($message)) {echo '<br />'; echo $message;}
     </table>
     <form method="link" action="<?php echo SITE_URL ?>/index.php/Exams">
         <input type="submit" value="Return To Exam Listing"></form>
-    exam_view_profile.tpl
 </center>

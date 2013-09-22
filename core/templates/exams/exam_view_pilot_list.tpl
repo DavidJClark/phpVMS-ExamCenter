@@ -15,7 +15,7 @@
     ?>
     <h2>Active Pilot's</h2>
     <h4>Assign Exams - Edit Exam Records</h4>
-    <table border="1" width="80%">
+    <table>
         <tr>
             <td>Assign Exams<br />(If enabled)</td>
             <td>Pilot</td>
@@ -73,5 +73,4 @@
 
     <form method="link" action="<?php echo SITE_URL ?>/index.php/Exams_admin">
         <input type="submit" value="Return To Exam Admin Panel"></form>
-    exam_view_pilotlist.tpl
 </center>

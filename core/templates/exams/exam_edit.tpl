@@ -14,7 +14,7 @@
     <?php
     if (isset($message)) {echo $message;}
     ?>
-    <table border="1px" width="75%">
+    <table>
         <tr>
             <td>Date Created:</td>
             <td><?php echo date(DATE_FORMAT, strtotime($exam->created_date)) ?></td>
@@ -66,7 +66,7 @@
     </table>
 
     <form action="<?php echo url('/Exams_admin');?>" method="post" enctype="multipart/form-data">
-        <table border="1px" width="75%">
+        <table>
             <tr>
                 <td>Field</td>
                 <td>Current Value</td>
@@ -128,5 +128,4 @@ foreach ($reasons as $reason) {	echo '<option value="'.$reason->id.'">'.$reason-
         <input type="hidden" name="action" value="save_changes" />
         <input type="submit" value="Save Changes" />
     </form>
-    exam_edit.tpl
 </center>

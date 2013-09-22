@@ -14,7 +14,7 @@
     if (isset($message)) {echo $message;}
     ?>
 
-    <table width="80%" border="1px">
+    <table>
         <form action="<?php echo url('/Exams_admin');?>" method="post" enctype="multipart/form-data">
             <tr>
                 <td>Exam question assigned to.</td>
@@ -66,5 +66,4 @@
             </tr>
         </form>
     </table>
- exam_edit_question_form.tpl
 </center>

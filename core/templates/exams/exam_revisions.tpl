@@ -25,7 +25,7 @@
     }
     else {?>
     <h2><?php echo $title->exam_description; ?> - Revision List</h2>
-    <table border="1px" width="75%">
+    <table>
         <tr>
             <td><b>Revision Reason</b></td>
             <td><b>Revision Date</b></td>
@@ -53,5 +53,3 @@
             <td colspan="3"><a href="<?php echo SITE_URL ?>/index.php/Exams_admin/edit_exam?id=<?php echo $exam_id; ?>">Return To Exam Editor</a></td>
         </tr>
     </table>
-    exam_revisions.tpl
-    <br />

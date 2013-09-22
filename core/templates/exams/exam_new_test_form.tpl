@@ -10,11 +10,10 @@
 //@license http://creativecommons.org/licenses/by-nc-sa/3.0/
 ?>
 <center>
-	exam_new_test_form.tpl
     <?php if (isset($message)) {echo $message;}
     ?>
     <form action="<?php echo url('/Exams_admin');?>" method="post" enctype="multipart/form-data">
-        <table width="80%" border="1px">
+        <table>
             <tr>
                 <td>New Exam Title</td>
                 <td><textarea rows="2" cols="40" name="exam_description" value=""></textarea></td>

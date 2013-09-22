@@ -11,7 +11,7 @@
 ?>
 <center>
     <h2>Manage Assigned Exams For <?php echo $pilot->firstname.' '.$pilot->lastname. ' ('.PilotData::GetPilotCode($pilot->code, $pilot->pilotid); ?>)</h2>
-    <table width="80%" border="1px">
+    <table>
         <tr>
             <td>Active Exam Titles</td>
             <td>Pilot Has Already<br />Taken And Passed Exam</td>
@@ -53,6 +53,4 @@
             </td>
         </tr>
     </table>
-
-    exam_assign_list.tpl
 </center>

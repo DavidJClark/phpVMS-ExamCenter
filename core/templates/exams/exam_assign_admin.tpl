@@ -39,5 +39,4 @@
     </table>
     <form method="link" action="<?php echo SITE_URL ?>/index.php/Exams_admin">
         <input type="submit" value="Return To Exam Admin Panel"></form>
-    exam_assign_admin.tpl
 </center>

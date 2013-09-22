@@ -13,7 +13,7 @@
 if (isset($message)) {echo '<br />'; echo $message;}
 
 echo '<br /><center>
-			<table width="80%" border="1px">
+			<table>
 				<tr><td>Exam</td><td>Result</td><td>Date Scored</td></tr>';
 foreach($history as $exam) {
     echo '<tr><td>'.$exam->exam_title.'</td><td>'.$exam->result.'</td><td>'.$exam->date.'</td></tr>';

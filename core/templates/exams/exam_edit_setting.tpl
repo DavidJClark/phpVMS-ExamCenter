@@ -14,9 +14,9 @@
     <?php if (isset($message)) {echo $message;}
     ?>
     <form action="<?php echo url('/Exams_admin');?>" method="post" enctype="multipart/form-data">
-        <table width="80%" border="1px">
+        <table>
             <tr>
-                <td colspan="3"><img src="<?php echo SITE_URL ?>/examimages/exam_logo.gif" alt="EXAMCenter &copy; simpilotgroup" /></td>
+                <td colspan="3"><img src="<?php echo TEMPLATES_PATH; ?>/exams/images/exam_logo.gif" alt="EXAMCenter &copy; simpilotgroup" /></td>
             </tr>
             <tr>
                 <td colspan="3" bgcolor="#cccccc"><b>Edit Setting</b></td>
@@ -66,5 +66,4 @@
     </form>
     <form method="link" action="<?php echo SITE_URL ?>/index.php/Exams_admin">
         <input type="submit" value="Return To Exam Admin Panel"></form>
-    exam_edit_setting.tpl
 </center>

@@ -11,9 +11,9 @@
 ?>
 <center>
     <br />
-    <table border="1px" width="75%">
+    <table>
         <tr>
-            <td><img src="<?php echo SITE_URL ?>/examimages/exam_logo.gif" alt="EXAMCenter &copy; simpilotgroup" /></td>
+            <td><img src="<?php echo TEMPLATES_PATH; ?>/exams/images/exam_logo.gif" alt="EXAMCenter &copy; simpilotgroup" /></td>
             <td colspan="2"><br /><h4>Exam's Available</h4></td>
         </tr>
         <?php
@@ -61,5 +61,4 @@
     ?>
     <form method="link" action="<?php echo SITE_URL ?>/index.php/Exams/view_profile">
         <input type="submit" value="View My Exam History"></form>
-    exam_list.tpl
 </center>
