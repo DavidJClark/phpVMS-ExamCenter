@@ -16,7 +16,7 @@
     <form action="<?php echo url('/Exams_admin');?>" method="post" enctype="multipart/form-data">
         <table>
             <tr>
-                <td colspan="3"><img src="<?php echo TEMPLATES_PATH; ?>/exams/images/exam_logo.gif" alt="EXAMCenter &copy; simpilotgroup" /></td>
+                <td colspan="3"><img src="<?php echo SITE_URL; ?>/core/templates/exams/images/exam_logo.gif" alt="EXAMCenter &copy; simpilotgroup" /></td>
             </tr>
             <tr>
                 <td colspan="3" bgcolor="#cccccc"><b>Edit Setting</b></td>

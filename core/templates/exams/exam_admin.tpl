@@ -16,7 +16,7 @@
         if (isset($message)) {echo '<tr><td colspan="6">'.$message.'</td></tr>';}
         ?>
         <tr>
-            <td colspan="2"><img src="<?php echo TEMPLATES_PATH; ?>/exams/images/exam_logo.gif" alt="EXAMCenter &copy simpilotgroup" /></td>
+            <td colspan="2"><img src="<?php echo SITE_URL; ?>/core/templates/exams/images/exam_logo.gif" alt="EXAMCenter &copy simpilotgroup" /></td>
             <td colspan="4"><br /><h4>EXAMCenter Admin Panel</h4></td>
 
         <tr>

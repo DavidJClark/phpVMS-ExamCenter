@@ -13,7 +13,7 @@
     <br />
     <table>
         <tr>
-            <td><img src="<?php echo TEMPLATES_PATH; ?>/exams/images/exam_logo.gif" alt="EXAMCenter &copy; simpilotgroup" /></td>
+            <td><img src="<?php echo SITE_URL; ?>/core/templates/exams/images/exam_logo.gif" alt="EXAMCenter &copy; simpilotgroup" /></td>
             <td colspan="2"><br /><h4>Exam's Available</h4></td>
         </tr>
         <?php

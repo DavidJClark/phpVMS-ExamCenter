@@ -15,7 +15,7 @@ if (isset($message)) {echo '<br />'; echo $message;}
     <h2>Exam History For: <?php echo Auth::$userinfo->firstname.' '.Auth::$userinfo->lastname.''; ?></h2>
     <table>
         <tr>
-            <td colspan="5"><img src="<?php echo TEMPLATES_PATH; ?>/exams/images/exam_logo.gif" alt="EXAMCenter &copy; simpilotgroup" /></td>
+            <td colspan="5"><img src="<?php echo SITE_URL; ?>/core/templates/exams/images/exam_logo.gif" alt="EXAMCenter &copy; simpilotgroup" /></td>
         </tr>
         <tr bgcolor="#cccccc">
             <td colspan="3">Exam History</td>

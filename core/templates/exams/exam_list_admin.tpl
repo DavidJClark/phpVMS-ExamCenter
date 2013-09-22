@@ -12,7 +12,7 @@
 <center>
     <table>
         <tr>
-            <td colspan="8"><img src="<?php echo TEMPLATES_PATH; ?>/exams/images/exam_logo.gif" alt="EXAMCenter &copy; simpilotgroup" /></td>
+            <td colspan="8"><img src="<?php echo SITE_URL; ?>/core/templates/exams/images/exam_logo.gif" alt="EXAMCenter &copy; simpilotgroup" /></td>
         </tr>
         <tr>
             <td colspan="8" bgcolor="#cccccc"><b>Existing Exams</b></td>

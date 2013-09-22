@@ -15,7 +15,7 @@
 
     <table>
         <tr>
-            <td colspan="5"><img src="<?php echo TEMPLATES_PATH; ?>/exams/images/exam_logo.gif" alt="EXAMCenter &copy; simpilotgroup" /></td>
+            <td colspan="5"><img src="<?php echo SITE_URL; ?>/core/templates/exams/images/exam_logo.gif" alt="EXAMCenter &copy; simpilotgroup" /></td>
         </tr>
         <tr>
             <td colspan="5" bgcolor="#cccccc"><b>Revision Reasons</b></td>
