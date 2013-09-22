@@ -28,7 +28,7 @@ class Exams extends CodonModule {
                 Template::Set('message', '<h4>'.$message->value.'</h4>');
                 Template::Set('exams', ExamsData::get_exams());
                 Template::Set('pilotmoney', Auth::$userinfo->totalpay);//use Autn class!
-                Template::Show('exam_list.tpl');
+                Template::Show('exams/exam_list.tpl');
             }
         }
     }
@@ -44,7 +44,7 @@ class Exams extends CodonModule {
         Template::Set('message', '<h4>'.$message->value.'</h4>');
         Template::Set('exams', ExamsData::get_exams());
         Template::Set('pilotmoney', Auth::$userinfo->totalpay);//use Autn class!
-        Template::Show('exam_list.tpl');
+        Template::Show('exams/exam_list.tpl');
     }
 
     public function buy_exam() {
@@ -58,14 +58,14 @@ class Exams extends CodonModule {
             Template::Set('message', '<div id="error"><b>You do not have enough funds in your company account to purchase the '.$examcost->exam_description.' exam!</b></div>');
             Template::Set('exams', ExamsData::get_exams());
             Template::Set('pilotmoney', $pilotmoney);
-            Template::Show('exam_list.tpl');
+            Template::Show('exams/exam_list.tpl');
         }
         else {
             Template::Set('examdescription', $examcost->exam_description);
             Template::Set('examid', $examcost->id);
             Template::Set('examcost', $examcost->cost);
             Template::Set('pilotmoney', $pilotmoney);
-            Template::Show('exam_purchase_confirm.tpl');
+            Template::Show('exams/exam_purchase_confirm.tpl');
         }
     }
     public function purchase_exam() {
@@ -79,7 +79,7 @@ class Exams extends CodonModule {
         Template::Set('questions', $exam);
         Template::Set('title', ExamsData::get_exam_title($exam_id));
         Template::Set('howmany_questions', ExamsData::get_howmany_questions($exam_id));
-        Template::Show('exam.tpl');
+        Template::Show('exams/exam.tpl');
     }
     public function grade_exam() {
         $exam_id = DB::escape($this->post->exam_id);
@@ -90,7 +90,7 @@ class Exams extends CodonModule {
         $i=1;
         $correct=0;
         Template::Set('title', $exam_description);
-        Template::Show('exam_question_result_header.tpl');
+        Template::Show('exams/exam_question_result_header.tpl');
         while ($i<= $howmany):
 
             $id = 'question_id' . $i;
@@ -109,7 +109,7 @@ class Exams extends CodonModule {
                 elseif ($question->correct_answer == '4') {Template::Set('answer', $question->answer_4 );}
                 Template::Set('number', $i);
                 Template::Set('div', 'success');
-                Template::Show('exam_question_result.tpl');
+                Template::Show('exams/exam_question_result.tpl');
                 $correct++;
             }
             else {
@@ -126,7 +126,7 @@ class Exams extends CodonModule {
                 elseif ($answer == '4') {Template::Set('wrong', $question->answer_4 );}
                 Template::Set('number', $i);
                 Template::Set('div', 'error');
-                Template::Show('exam_question_result.tpl');
+                Template::Show('exams/exam_question_result.tpl');
             }
             $i++;
         endwhile;
@@ -159,6 +159,6 @@ class Exams extends CodonModule {
         $id = Auth::$userinfo->pilotid;
 
         Template::Set('pilotdata', ExamsData::get_pilot_data($id));
-        Template::Show('exam_view_profile.tpl');
+        Template::Show('exams/exam_view_profile.tpl');
     }
 }

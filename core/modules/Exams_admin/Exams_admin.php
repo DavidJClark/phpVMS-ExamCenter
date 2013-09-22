@@ -13,7 +13,7 @@ class Exams_admin extends CodonModule {
     public function index() {
         if(!ExamsData::check_admin(Auth::$userinfo->pilotid)) {
             Template::Set('message', '<div id="error"><b>You must an EXAMCenter administrator to access this feature!</b></div><br />');
-            Template::Show('frontpage_main.tpl');
+            Template::Show('exams/frontpage_main.tpl');
             return;
         //header('Location: '.url('/'));
         }
@@ -49,7 +49,7 @@ class Exams_admin extends CodonModule {
             Template::Set('unapproved',ExamsData::get_exams_unapproved());
             Template::Set('questions', ExamsData::get_questions_admin());
             Template::Set('exams', ExamsData::get_exams_admin());
-            Template::Show('exam_admin.tpl');
+            Template::Show('exams/exam_admin.tpl');
         }
     }
 
@@ -60,12 +60,12 @@ class Exams_admin extends CodonModule {
 
     public function view_current_exams() {
         Template::Set('exams', ExamsData::get_exams_admin());
-        Template::Show('exam_list_admin.tpl');
+        Template::Show('exams/exam_list_admin.tpl');
     }
 
     public function view_current_questions() {
         Template::Set('questions', ExamsData::get_questions_admin());
-        Template::Show('exam_question_list.tpl');
+        Template::Show('exams/exam_question_list.tpl');
     }
 
     public function edit_exam() {
@@ -73,26 +73,26 @@ class Exams_admin extends CodonModule {
 
         Template::Set('num_questions', ExamsData::get_howmany_questions($id));
         Template::Set('exam', ExamsData::get_exam_edit($id));
-        Template::Show('exam_edit.tpl');
+        Template::Show('exams/exam_edit.tpl');
     }
 
     public function view_individual_pilot() {
         Template::Set('pilots', PilotData::GetAllPilots(''));
-        Template::Show('exam_view_pilot_list.tpl');
+        Template::Show('exams/exam_view_pilot_list.tpl');
     }
 
     public function view_pilot() {
         $id = $_GET['id'];
 
         Template::Set('pilotdata', ExamsData::get_pilot_data($id));
-        Template::Show('exam_view_pilot.tpl');
+        Template::Show('exams/exam_view_pilot.tpl');
     }
 
     public function edit_pilot_record() {
         $id = $_GET['id'];
 
         Template::Set('record', ExamsData::get_pilot_record($id));
-        Template::Show('exam_edit_pilot_record.tpl');
+        Template::Show('exams/exam_edit_pilot_record.tpl');
     }
 
     protected function save_edit_record() {
@@ -136,7 +136,7 @@ class Exams_admin extends CodonModule {
         ExamsData::delete_pilot_record($id);
 
         Template::Set('pilotdata', ExamsData::get_pilot_data($pilot_id));
-        Template::Show('exam_view_pilot.tpl');
+        Template::Show('exams/exam_view_pilot.tpl');
     }
 
     public function see_exam_revisions() {
@@ -144,7 +144,7 @@ class Exams_admin extends CodonModule {
 
         Template::Set('exam_id', ($id));
         Template::Set('revisions', ExamsData::get_exam_revisions($id));
-        Template::Show('exam_revisions.tpl');
+        Template::Show('exams/exam_revisions.tpl');
     }
 
     public function edit_questions() {
@@ -152,13 +152,13 @@ class Exams_admin extends CodonModule {
         $questions = ExamsData::get_exam($id);
         Template::Set('title', ExamsData::get_exam_title($id));
         Template::Set('questions', $questions);
-        Template::Show('exam_question_edit_list.tpl');
+        Template::Show('exams/exam_question_edit_list.tpl');
     }
 
     public function edit_question() {
         $id = $_GET['id'];
         Template::Set('question', ExamsData::get_question($id));
-        Template::Show('exam_question_edit_form.tpl');
+        Template::Show('exams/exam_question_edit_form.tpl');
     }
 
     protected function save_changes_question() {
@@ -179,7 +179,7 @@ class Exams_admin extends CodonModule {
     }
 
     public function new_test_form() {
-        Template::Show('exam_new_test_form.tpl');
+        Template::Show('exams/exam_new_test_form.tpl');
     }
 
     protected function save_new_test() {
@@ -194,7 +194,7 @@ class Exams_admin extends CodonModule {
 
     public function new_question_form() {
         Template::Set('exams', ExamsData::get_exams_admin());
-        Template::Show('exam_new_question_form.tpl');
+        Template::Show('exams/exam_new_question_form.tpl');
     }
 
     protected function save_new_question() {
@@ -212,11 +212,11 @@ class Exams_admin extends CodonModule {
         Template::Set('message', '<div id="success">New Question Added!</div>');
         Template::Set('questions', ExamsData::get_questions_admin());
         Template::Set('exams', ExamsData::get_exams_admin());
-        Template::Show('exam_admin.tpl');
+        Template::Show('exams/exam_admin.tpl');
     }
 
     public function new_revision_form() {
-        Template::Show('exam_new_revision_form.tpl');
+        Template::Show('exams/exam_new_revision_form.tpl');
     }
 
     protected function save_new_revision() {
@@ -227,26 +227,26 @@ class Exams_admin extends CodonModule {
         Template::Set('message', '<div id="success">New Revision Reason Added!</div>');
         Template::Set('questions', ExamsData::get_questions_admin());
         Template::Set('exams', ExamsData::get_exams_admin());
-        Template::Show('exam_admin.tpl');
+        Template::Show('exams/exam_admin.tpl');
     }
 
     public function view_revision_reasons() {
         Template::Set('reasons', ExamsData::get_revision_reasons());
-        Template::Show('exam_revision_list.tpl');
+        Template::Show('exams/exam_revision_list.tpl');
     }
 
     public function edit_reason() {
         $id = $_GET['id'];
 
         Template::Set('reason', ExamsData::get_revision($id));
-        Template::Show('exam_revision_edit.tpl');
+        Template::Show('exams/exam_revision_edit.tpl');
     }
 
     public function get_setting_info() {
         $id = $_GET['id'];
 
         Template::Set('setting', ExamsData::get_setting_info($id));
-        Template::Show('exam_edit_setting.tpl');
+        Template::Show('exams/exam_edit_setting.tpl');
     }
 
     protected function edit_setting() {
@@ -267,7 +267,7 @@ class Exams_admin extends CodonModule {
 
         Template::Set('message', '<div id="success">Revision Reason Updated!</div>');
         Template::Set('reasons', ExamsData::get_revision_reasons());
-        Template::Show('exam_revision_list.tpl');
+        Template::Show('exams/exam_revision_list.tpl');
     }
 
     public function save_approve_result() {
@@ -281,7 +281,7 @@ class Exams_admin extends CodonModule {
 
         Template::Set('message', $message);
         Template::Set('unapproved',ExamsData::get_exams_unapproved());
-        Template::Show('exam_admin.tpl');
+        Template::Show('exams/exam_admin.tpl');
     }
 
     public function assign_exams_pilotlist() {
@@ -290,7 +290,7 @@ class Exams_admin extends CodonModule {
         Template::Set('pilot', PilotData::GetPilotData($id));
         Template::Set('exams', ExamsData::get_exams());
         Template::Set('assigned', ExamsData::get_assigned_exams($id));
-        Template::Show('exam_assign_list.tpl');
+        Template::Show('exams/exam_assign_list.tpl');
     }
 
     public function assign_exam() {
@@ -302,7 +302,7 @@ class Exams_admin extends CodonModule {
         Template::Set('pilot', PilotData::GetPilotData($pilot_id));
         Template::Set('exams', ExamsData::get_exams());
         Template::Set('assigned', ExamsData::get_assigned_exams($pilot_id));
-        Template::Show('exam_assign_list.tpl');
+        Template::Show('exams/exam_assign_list.tpl');
     }
 
     public function assign_exam_admin() {
@@ -315,7 +315,7 @@ class Exams_admin extends CodonModule {
         Template::Set('unapproved',ExamsData::get_exams_unapproved());
         Template::Set('questions', ExamsData::get_questions_admin());
         Template::Set('exams', ExamsData::get_exams_admin());
-        Template::Show('exam_admin.tpl');
+        Template::Show('exams/exam_admin.tpl');
     }
 
     public function unassign_exam() {
@@ -327,19 +327,19 @@ class Exams_admin extends CodonModule {
         Template::Set('pilot', PilotData::GetPilotData($pilot_id));
         Template::Set('exams', ExamsData::get_exams());
         Template::Set('assigned', ExamsData::get_assigned_exams($pilot_id));
-        Template::Show('exam_assign_list.tpl');
+        Template::Show('exams/exam_assign_list.tpl');
     }
 
     public function edit_admin_list()    {
        Template::Set ('pilots', PilotData::GetAllPilots());
-       Template::Show('exam_assign_admin.tpl');
+       Template::Show('exams/exam_assign_admin.tpl');
     }
 
     public function edit_admin(){
         $id = $_GET['id'];
         Template::Set('pilot_id', $id);
         Template::Set('pilot', ExamsData::get_admin_data($id));
-        Template::Show('exam_edit_admin.tpl');
+        Template::Show('exams/exam_edit_admin.tpl');
     }
 
     protected function edit_admin_setting() {
@@ -349,28 +349,28 @@ class Exams_admin extends CodonModule {
         if ($cur_level == $admin_level)
             {
                 Template::Set ('pilots', PilotData::GetAllPilots());
-                Template::Show('exam_assign_admin.tpl');
+                Template::Show('exams/exam_assign_admin.tpl');
             }
         elseif ($cur_level == '0')
             {
                 ExamsData::add_admin($pilot_id, $admin_level);
                 Template::Set('message', '<div id="success">Pilot Administrator Status Changed.</div>');
                 Template::Set ('pilots', PilotData::GetAllPilots());
-                Template::Show('exam_assign_admin.tpl');
+                Template::Show('exams/exam_assign_admin.tpl');
             }
         elseif ($admin_level == '0')
             {
                 ExamsData::delete_admin($pilot_id);
                 Template::Set('message', '<div id="success">Pilot Administrator Status Changed.</div>');
                 Template::Set ('pilots', PilotData::GetAllPilots());
-                Template::Show('exam_assign_admin.tpl');
+                Template::Show('exams/exam_assign_admin.tpl');
             }
         else
             {
                 ExamsData::edit_admin($pilot_id, $admin_level);
                 Template::Set('message', '<div id="success">Pilot Administrator Status Changed.</div>');
                 Template::Set ('pilots', PilotData::GetAllPilots());
-                Template::Show('exam_assign_admin.tpl');
+                Template::Show('exams/exam_assign_admin.tpl');
 
                 }
     }
